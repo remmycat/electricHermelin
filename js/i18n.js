@@ -69,15 +69,15 @@ var i18n = {
   },
 
   get_message: function get_message(msg) {
-    if (conf.vars.platform === 'Chrome' && !i18n.forced) {
-      return chrome.i18n.getMessage(msg);
-    } else {
+//    if (conf.vars.platform === 'Chrome' && !i18n.forced) {
+//      return chrome.i18n.getMessage(msg);
+//    } else {
       if (i18n.dict != null && i18n.dict.hasOwnProperty(msg)) {
         return i18n.dict[msg].message;
       } else {
         return '';
       }
-    }
+//    }
   },
 
   trans_html: function trans_html() {
